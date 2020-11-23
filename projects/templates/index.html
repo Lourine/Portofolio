@@ -1,0 +1,197 @@
+{%extends 'base.html'%}
+{%load bootstrap4%}
+{% load static %}
+{{block.super}}
+
+
+{% block content %}
+<!------About-------->
+<div class="main about" id="about">
+
+  <div class="jumbotron">
+    <h1 class="text-right">Hi there! I'm Lourine Millicent.</h1>
+    <h3 class="text-right">I'm a Full-Stack Software Developer</h3>
+  </div> 
+
+  <div class="container">
+
+  <div class="content row">
+    <div class="col-md-4">
+      <img class="img-fluid" src="https://images.pexels.com/photos/4820763/pexels-photo-4820763.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" width="200" height="100" alt="photo of me">
+      <p><strong>“I shine with love and light in every moment.”</strong> </p>
+    </div>
+    <div class="col-md-8">
+      <p>Things I love: </p>
+      <ul>
+        <li>Writing beautiful code, especially in JavaScript & Python</li>
+        <li>Making full-stack web applications & APIs</li>
+        <li>Learning new languages (programming or otherwise)</li>
+        <li>Building cool things (programming or otherwise)</li>
+      </ul>
+      <p>When I'm not programming, I like to cook and spend time with my family.</p>
+
+      <div class="socials">
+        <ul>
+          <li>
+            <a href="https://github.com/Lourine"
+              ><span class="ico-circle"
+                ><i class="ion-social-github"></i></span
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/lourine-millicent-a3757b2b/"
+              ><span class="ico-circle"
+                ><i class="ion-social-linkedin"></i></span
+            ></a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    </div>
+   
+
+</div>
+<!--Skills Showcases -->
+<h4 class="text-center " style="text-decoration:underline;"> <strong>Skills</strong> </h4>
+<hr />
+                    <div class="row" id="skills">
+                      <div class="col-md-1 mb-2"></div>
+                      <div class="col-md-2 mb-2">
+                        <span
+                          ><img
+                            src="{% static "img/javascript-logo.png" %}"
+                                class="imgs"
+                            alt=""
+                        /></span>
+                      </div>
+                      <div class="col-md-2 mb-2">
+                        <img
+                          src="{% static "img/angular-seeklogo.com.svg" %}"
+                          class="imgs"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-md-2 mb-2">
+                        <img
+                          src="{% static "img/php.png" %}"
+                          class="imgs"
+                          alt=""
+                        />
+                       
+                      </div>
+                      <div class="col-md-2 mb-2">
+                        <img
+                          src="{% static "img/wordpress.png" %}"
+                          class="imgs"
+                          alt=""
+                        />
+                       
+                      </div>
+                      <div class="col-md-2 mb-2">
+                        <img src="{%static "img/HTML5CSS3Logos.svg" %}" class="imgs" alt="" />
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-md-1 mb-2"></div>
+                      <div class="col-md-2 mb-2">
+                        <img
+                          src="{%static "img/python-seeklogo.com.svg" %}"
+                          class="imgs"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-md-2 mb-2">
+                        <img
+                          src="{% static "img/django-logo-negative.png" %}"
+                          class="imgs"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-md-2 mb-2">
+                        <img
+                          src="{% static "img/postgresql-seeklogo.com.svg" %}"
+                          class="imgs"
+                          alt=""
+                        />
+                        <span class="">Postgresql</span>
+                      </div>
+                      <div class="col-md-2 mb-2">
+                        <img
+                          src="{% static "img/git-seeklogo.com.svg" %}"
+                          class="imgs"
+                          alt=""
+                        />
+                      </div>
+                      <div class="col-md-2 mb-2">
+                        <img
+                          src="{% static "img/flask-seeklogo.com.svg" %}"
+                          class="imgs"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                      <div class="col-md-1 mb-2"></div>
+                      <div class="col-md-2 mb-2">
+                        <img
+                          src="{%static "img/drest.png" %}"
+                          class="imgs"
+                          alt=""
+                        />
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+<!-- Image Showcases -->
+<section class="showcase " style="padding-top:5%; padding-bottom:5%">
+    <div class="container p-0 " id = projects>
+        <h4 class="text-center " style="text-decoration:underline;"> <strong>Projects</strong> </h4>
+        <!-- Looping through projects   -->
+       <hr>
+
+        <div class="row">
+          
+            {% for project in projects %}
+            <div class="col-md-4">
+              <h5 class="text-center " style="color:brown;font-size:250%;font-family: 'Pacifico';font-style: normal;font-weight: 400;"> {{ project.title }} </h5>
+                <img src="{{ project.article_image.url}} " class="img-fluid " alt="Image ">
+                
+                <p class="lead mb-0 " style="font-family: 'Nunito Sans';font-style: normal;font-weight: 400;">{{ project.description }} </p>
+                <p>
+                <a class="btn btn-outline-default bg-default" href="{{ project.link }} ">Visit Site</a>
+                </p>
+               
+              </div>
+              {% endfor %}
+        </div>
+       
+
+    </div>
+    <hr>
+</section>
+<section  class="content-section text-center " >
+  <div class="container ">
+      <div class="row " id="contact">
+          <div class="col-lg-8 mx-auto ">
+              <h2 style="color:brown;font-size:350%;font-family: 'Pacifico';font-style: normal;font-weight: 400;">Contact</h2>
+
+
+              <p style="font-family: 'Nunito Sans';font-style: normal;font-weight: 400;">Find more projects at <a href="https://github.com/Lourine ">my github page</a>. The projects are open source, and you can use them for any purpose.</p>
+              <p style="font-family: 'Nunito Sans';font-style: normal;font-weight: 400;">Contact me through my email <b>lourine.millicent@gmail.com<b></p>
+          </div>
+      </div>
+  </div>
+{% endblock %}
+            
