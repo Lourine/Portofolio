@@ -165,10 +165,10 @@
           
             {% for project in projects %}
             <div class="col-md-4">
-              <h5 class="text-center " style="color:brown;font-size:250%;font-family: 'Pacifico';font-style: normal;font-weight: 400;"> {{ project.title }} </h5>
+              <h6 class="text-center "> {{ project.title }} </h6>
                 <img src="{{ project.article_image.url}} " class="img-fluid " alt="Image ">
                 
-                <p class="lead mb-0 " style="font-family: 'Nunito Sans';font-style: normal;font-weight: 400;">{{ project.description }} </p>
+                <p >{{ project.description }} </p>
                 <p>
                 <a class="btn btn-primary" role="button"href="{{ project.link }} ">Visit Site</a>
                 </p>
