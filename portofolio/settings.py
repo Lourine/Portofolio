@@ -156,13 +156,6 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
-DEFAULT_FROM_EMAIL = 'lourinemilly.com'
-EMAIL_HOST = 'smtp.sendgrid.net' # new
-EMAIL_HOST_USER = 'Millicent' # new
-EMAIL_HOST_PASSWORD = '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' #news
-EMAIL_PORT = 587 # new
-EMAIL_USE_TLS = True # n
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'lourinemilly',
